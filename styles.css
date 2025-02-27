@@ -8,27 +8,110 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        
+    }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: #f2f2f2;
+        border: 2px solid #1b595f;
+        box-shadow: 0 0 10px #1b595f;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        width: 100%;
+        
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+    .logo{
+        font-size: 30px;
+        font-weight: bold;
+    }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:30px;
+        padding-left:5px;
+
+    }
+
+    nav ul{
+        display: flex;
+    }
+
+    nav ul li{
+        list-style: none;
+        margin-right: 20px;
+        transition: 0.9s;
+        padding-left: 20px;
+        
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color:#005262;
+        font-size: 20px;
+    }
+
+    nav ul li a:hover{
+        border-bottom:solid 2px #005262;
+      
+    }
+    .signup{
+        background-color: #f2f2f2;
+        border: 1px solid black;
+        padding: 10px 25px;
+        margin-right: 40px;
+        border-radius: 13px;
+        height: auto;
+        width: auto;
+        right:30%;
+    }
+
+    .login{
+        background-color: #f2f2f2;
+        border: 1px solid black;
+        padding: 10px 25px;
+        border-radius: 13px;
+        height: auto;
+        width: auto;  
+        right:10%;
+        margin-left: 30px;
+
+    }
+
+    .signup:hover{
+        background-color:#005262;
+        color: white;
+    }
+
+    .login:hover{
+        background-color: #005262;
+        color: white;
+    }
+
+    .signup, .login{
+        cursor: pointer;
+        margin-right: 40px;
+        position: absolute;
+        margin-bottom: 10px;
+        transition: 0.7s;
+    }
+
+    .signup:hover, .login:hover{
+        transform: scale(1.1);
+    }
+
+    
 
 main {
     padding: 20px;
