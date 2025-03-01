@@ -5,7 +5,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #573b8a;
+    font-size: larger;
 }
 
     body{
@@ -66,16 +67,7 @@ body {
         border-bottom:solid 2px #005262;
       
     }
-    .signup{
-        background-color: #f2f2f2;
-        border: 1px solid black;
-        padding: 10px 25px;
-        margin-right: 40px;
-        border-radius: 13px;
-        height: auto;
-        width: auto;
-        right:30%;
-    }
+
 
     .login{
         background-color: #f2f2f2;
@@ -89,30 +81,18 @@ body {
 
     }
 
-    .signup:hover{
-        background-color:#005262;
-        color: white;
-    }
-
     .login:hover{
         background-color: #005262;
         color: white;
     }
 
-    .signup, .login{
-        cursor: pointer;
+    .login{ cursor: pointer;
         margin-right: 40px;
         position: absolute;
         margin-bottom: 10px;
         transition: 0.7s;
+
     }
-
-    .signup:hover, .login:hover{
-        transform: scale(1.1);
-    }
-
-    
-
 main {
     padding: 20px;
 }
@@ -254,7 +234,7 @@ main {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100% * $nb-slides;
+      width: 100% * nb-slides;
   
       transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     }
@@ -267,7 +247,11 @@ main {
         border-radius: 15px;
       }
     }
-  }
+}
+.grad image {
+  border-radius: 300px;
+
+}
 
 
 footer {
@@ -279,3 +263,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
