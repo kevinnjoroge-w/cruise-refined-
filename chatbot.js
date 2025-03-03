@@ -6,6 +6,16 @@ function initChatbot() {
     console.log("Chatbot initialized.");
 }
 
+// Ensure that the AIChat component can be rendered in a non-React environment
+document.addEventListener('DOMContentLoaded', function() {
+    const root = document.getElementById('chatbox');
+    if (root) {
+        // Render the AIChat component here if using React
+        // This requires a React environment to be set up
+    }
+});
+
+
 // Call the initChatbot function to set up the chatbot
 initChatbot();
 /* eslint-disable no-unused-vars */
