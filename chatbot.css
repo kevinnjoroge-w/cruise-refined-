@@ -7,122 +7,51 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-/* Chatbox Container */
-#chatbox {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+/* Chatbox Styles */
+.chatbox {
     width: 400px;
-    max-width: 90%;
-    overflow: hidden;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-}
-
-/* Header */
-.chat-header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Messages Area */
-#messages {
-    padding: 20px;
-    height: 300px;
-    overflow-y: auto;
-    border-bottom: 1px solid #e0e0e0;
-    flex-grow: 1;
-}
-
-/* Message Styles */
-.user-message {
-    background-color: #d1e7dd;
-    color: #0f5132;
     padding: 10px;
-    border-radius: 10px;
-    margin: 5px 0;
-    max-width: 75%;
-    align-self: flex-end;
-    position: relative;
-    animation: fadeIn 0.3s;
 }
 
-.bot-message {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5px 0;
-    max-width: 75%;
-    align-self: flex-start;
-    position: relative;
-    animation: fadeIn 0.3s;
-}
-
-/* Input Area */
-.chatbox {
-    display: flex;
-    padding: 10px;
-    background-color: #f1f1f1;
-}
-
-/* User Input Field */
 .user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ced4da;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-    transition: border-color 0.3s;
+    margin-top: 10px;
 }
 
-.user-input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Send Button */
 .send-button {
-    background-color: #007bff;
+    background-color: #573b8a;
     color: white;
     border: none;
+    padding: 10px;
     border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s;
 }
 
 .send-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #6d44b8;
 }
 
-.send-button:active {
-    transform: translateY(0);
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 500px) {
-    #chatbox {
-        width: 100%;
-    }
+/* Additional styles for better user experience */
+.chatbox h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
 }
