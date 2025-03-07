@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e9ecef;
+    background-color: #ffffff; /* Updated to match other pages */
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,7 +13,7 @@ body {
 .chatbox {
     width: 400px;
     height: 500px;
-    background-color: white;
+    background-color: #f8f9fa; /* Updated to match other pages */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -30,7 +30,7 @@ body {
 }
 
 .send-button {
-    background-color: #573b8a;
+    background-color: #007bff; /* Updated to match other pages */
     color: white;
     border: none;
     padding: 10px;
@@ -40,7 +40,7 @@ body {
 }
 
 .send-button:hover {
-    background-color: #6d44b8;
+    background-color: #0056b3; /* Updated to match other pages */
 }
 
 #messages {
@@ -53,5 +53,6 @@ body {
 .chatbox h2 {
     margin: 0;
     font-size: 1.5em;
+    color: #343a40; /* Updated to match text color in other pages */
     text-align: center;
 }

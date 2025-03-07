@@ -63,11 +63,22 @@ function AIChat() {
     setPrompt(event.target.value);
   };
 
-  const handleGenerateText = async () => {
+const handleGenerateText = async () => {
+    const response = await fetch('/api/chatbot', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
+    });
+    const data = await response.json();
+    setResponse(data.response);
+
     setLoading(true);
     setShowPrompt(true);
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-pro' }); // This line can be removed if not needed
+
 
     try {
       const result = await model.generateContentStream(prompt);
