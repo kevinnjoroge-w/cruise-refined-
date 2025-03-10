@@ -23,23 +23,34 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-// Registration route
 app.post('/register', async (req, res) => {
+    const connection = create_connection();
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const newUser = new User({
-        username: req.body.username,
-        password: hashedPassword
+    const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
+    connection.query(query, [req.body.username, hashedPassword], (error, results) => {
+        if (error) {
+            return res.status(500).send('Error registering user');
+        }
+        res.status(201).send('User registered successfully');
     });
-    await newUser.save();
-    res.status(201).send('User registered successfully');
+    connection.end();
 });
 
-// Login route
 app.post('/login', async (req, res) => {
-    const user = await User.findOne({ username: req.body.username });
-    if (user && await bcrypt.compare(req.body.password, user.password)) {
-        req.session.userId = user._id;
-        res.send('Login successful');
+    const connection = create_connection();
+    const query = 'SELECT * FROM users WHERE username = ?';
+    connection.query(query, [req.body.username], async (error, results) => {
+        if (error) {
+            return res.status(500).send('Error logging in');
+        }
+        if (results.length > 0 && await bcrypt.compare(req.body.password, results[0].password)) {
+            req.session.userId = results[0].id; // Assuming 'id' is the primary key
+            res.send('Login successful');
+        } else {
+            res.status(401).send('Invalid credentials');
+        }
+    });
+    connection.end();
     } else {
         res.status(401).send('Invalid credentials');
     }
