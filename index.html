@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cruise App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cruise App</title>    
     <link rel="stylesheet" href="styles.css" />
     <script src="chatbot.js"></script>
     <script src="recommendations.js"></script>
     <script src="scheduler.js"></script>
     <script src="routineAnalysis.js"></script>
     <script src="gradeTracking.js"></script>
+    <script src="slideshow.js" defer></script>
   </head>
   <body>
     <header>
@@ -34,36 +35,25 @@
 
     <main>
       <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img alt="student" src="students.jpg" style="width: 100%" />
-          <div class="text">Cruise app</div>
+          <img src="students.jpg" alt="Students" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img alt="students walking on campus"
-            src="university-students-walking-outside-on-campus.jpg"
-            style="width: 100%"
-          />
-          <div class="text">Cruise app</div>
+          <img src="university-students-walking-outside-on-campus.jpg" alt="Campus" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="three-students-working-flatlay.jpg" style="width: 100%" alt="3 students" />
-          <div class="text">cruise app</div>
+          <img src="three-students-working-flatlay.jpg" alt="Study Group" style="width:100%">
         </div>
 
-        <!-- Next and previous buttons -->
+        <!-- Navigation arrows -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <br />
 
-      <!-- The dots/circles -->
-      <div style="text-align: center">
+      <!-- Navigation dots -->
+      <div class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
