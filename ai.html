@@ -1,37 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <link rel="stylesheet" href="chatbot.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered student support platform with chatbots, grade tracking, and academic planning tools">
+  <title>Features - Student Support Website</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="chatbox" class="chatbox" role="dialog" aria-labelledby="chatbox-title" aria-describedby="chatbox-description">
-        <header>
-            <h2 id="chatbox-title">Chatbot</h2>
-            <button id="close-chat" aria-label="Close chat" onclick="closeChat()">X</button>
-        </header>
-        <div id="messages" class="messages" aria-live="polite"></div>
-        <div class="chat-input">
-            <input type="text" id="userInput" class="user-input" placeholder="Type your question..." aria-label="User  input for chatbot" onkeypress="handleKeyPress(event)">
-            <button class="send-button" onclick="handleGenerateText()" aria-label="Send message">Send</button>
-        </div>
+  <header role="banner">
+    <h1>Student Success Hub</h1>
+    
+    <nav aria-label="Main navigation">
+      <div class="search-bar">
+        <input type="text" placeholder="Search resources, FAQs..." aria-label="Search">
+        <button type="submit">Go</button>
+      </div>
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" aria-current="page">Features</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="forum.html">Community Forum</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="auth-section">
+        <button class="login" onclick="window.location.href='login-signup.html'">Login/Sign Up</button>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section aria-labelledby="ai-tools">
+      <h2 id="ai-tools">AI-Powered Academic Support</h2>
+      
+      <article aria-labelledby="instant-support">
+        <h3 id="instant-support">Instant Assistance</h3>
+        <ul>
+          <li><a href="ai.html">24/7 Support Chatbot</a> - Get instant answers about deadlines and courses</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="academic-planning">
+        <h3 id="academic-planning">Academic Planning</h3>
+        <ul>
+          <li>Personalized Recommendations <small>(AI-curated study plans based on your progress)</small></li>
+          <li>Scheduling Assistant <small>(Auto-syncs with your syllabus and deadlines)</small></li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="progress-tracking">
+        <h3 id="progress-tracking">Progress Monitoring</h3>
+        <ul>
+          <li>Routine Analysis <small>(Weekly habit reports with improvement tips)</small></li>
+          <li>Grade Tracking <small>(Visualize trends and predict outcomes)</small></li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="workflow">
+      <h2 id="workflow">How It Works</h2>
+      <ol>
+        <li>Connect your academic calendar</li>
+        <li>Set personalized goals</li>
+        <li>Receive daily AI insights</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="integrations">
+      <h2 id="integrations">Platform Integrations</h2>
+      <ul>
+        <li>Google Classroom</li>
+        <li>Microsoft Teams</li>
+        <li>Canvas LMS</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <details>
+        <summary>How does grade prediction work?</summary>
+        <p>Our system analyzes historical performance and course patterns...</p>
+      </details>
+      <details>
+        <summary>Is my data secure?</summary>
+        <p>We use end-to-end encryption and comply with FERPA regulations...</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="emergency">
+      <h2 id="emergency">Urgent Support</h2>
+      <p>24/7 Campus Hotline: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    </section>
+
+    <section aria-labelledby="roadmap">
+      <h2 id="roadmap">Future Features</h2>
+      <ul>
+        <li>Group Study Matchmaking</li>
+        <li>Mental Health Check-Ins</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="accessibility.html">Accessibility</a>
     </div>
-
-    <script src="chatbot.js"></script>
-    <script>
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                handleGenerateText();
-            }
-        }
-
-        function closeChat() {
-            const chatbox = document.getElementById('chatbox');
-            chatbox.style.display = 'none';
-            alert('Thanks for using our Chatbot!');
-        }
-    </script>
-</body>
-</html>
+    <div class="social-media">
+      <p>&copy; 2025 Cruise App. All rights reserved.</p>
+      <a href="https://facebook.com" rel="norefferrer noopener">Facebook</a>
+      <a href="https://twitter.com" rel="norefferrer noopener">Twitter</a>
+      <a href="https://instagram.com" rel="norefferrer noopener">Instagram</a>
+    </div>
+    <p

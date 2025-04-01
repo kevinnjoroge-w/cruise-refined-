@@ -153,7 +153,27 @@ button:hover{
 	transform: scale(.6);
 }
 .footer{
+    border: #000;
+	border: radius 13px;
+	padding: 10px;
 	margin-left:10%;
+
+}
+.hover-link {
+    color: blue; /* Default text color */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+	flex-direction: column;
+}
+
+/* Hover effect */
+.hover-link:hover {
+    color: rgb(3, 255, 158); /* Change text color on hover */
+    text-decoration: underline; /* Add underline on hover */
+    background-color: #ac7704; /* Change background color on hover */
+    padding: 5px; /* Add padding on hover */
+    border-radius: 5px; /* Rounded corners */
+	transform: scale(1.1); /* Scale up the link */
 }
 </style>
 
@@ -186,9 +206,9 @@ button:hover{
 	<div class="footer"><footer>
 		<div class="social-media">
 			<p>&copy; 2025 Cruise App. All rights reserved.</p>
-			<a href="https://facebook.com" target="_blank"rel="norefferrer noopener">Facebook</a>
-			<a href="https://twitter.com" target="_blank"rel="norefferrer noopener">Twitter</a>
-			<a href="https://instagram.com"target="_blank" rel="norefferrer noopener">Instagram</a>
+			<a href="https://facebook.com" target="_blank"rel="norefferrer noopener" class="hover-link">Facebook</a>
+			<a href="https://twitter.com" target="_blank"rel="norefferrer noopener" class="hover-link">Twitter</a>
+			<a href="https://instagram.com"target="_blank" rel="norefferrer noopener"class="hover-link">Instagram</a>
 		  </div>
 	</footer>
 	</div>
